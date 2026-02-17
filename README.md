@@ -60,6 +60,28 @@ Create `EXPLANATION.md` (max 250 words) containing:
 - **Why does your fix solve it?**
 - **One realistic case / edge case your tests still don’t cover**
 
-## Submission
+## How to run the tests
 
+### Locally
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Run tests with pytest:
+   ```bash
+   python -m pytest -v
+   ```
+
+### With Docker
+1. Build the image:
+   ```bash
+   docker build -t test_eskelete_assignment .
+   ```
+2. Run the tests:
+   ```bash
+   docker run --rm test_eskelete_assignment
+   ```
+   
+   (The --rm flag automatically removes the container after it finishes, keeping your system clean.)
+## Submission
 - Submit a public GitHub repository URL containing your solution to the Google form link provided.
