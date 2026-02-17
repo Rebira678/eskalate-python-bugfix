@@ -27,6 +27,8 @@ class Client:
             headers = {}
 
         if api:
+            # Check if the token is an OAuth2Token instance and if it has expired.
+            # Also refresh if the token is not a valid OAuth2Token instance (like a dictionary).
             if not isinstance(self.oauth2_token, OAuth2Token) or self.oauth2_token.expired:
                 self.refresh_oauth2()
 
